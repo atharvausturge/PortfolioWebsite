@@ -1,0 +1,12 @@
+# Local-only ticker config (holds your Alpha Vantage key).
+# Copy ticker.config.example.js → ticker.config.local.js and edit there.
+ticker.config.local.js
+
+# macOS Finder metadata
+.DS_Store
+
+# Brainstorm scratch dir (created by the planning visual companion)
+.superpowers/
+
+# Playwright MCP cache
+.playwright-mcp/

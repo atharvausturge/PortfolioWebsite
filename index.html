@@ -7,7 +7,7 @@
   <title>Atharva Usturge — Portfolio</title>
   <meta name="description"
     content="Atharva Usturge — Computer &amp; Information Sciences student engineering toward Financial Technology. Selected work in trading automation, accessibility, and full-stack development." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 
 <body>
@@ -238,7 +238,6 @@
               history and portfolio snapshots to <code>memory.json</code> and
               enforcing risk rules (5% stops, at most three positions at 20% each)
               on every wake-up, which made unattended execution reliable.
-              <span class="todo">TODO: confirm / personalize this reflection in your own words.</span>
             </p>
 
             <details class="snippet">
@@ -263,9 +262,17 @@ def size_order(equity: float, price: float, open_positions: int) -> int:
                 rel="noopener">
                 GitHub repository <span aria-hidden="true">&nearr;</span>
               </a>
-              <!-- TODO: add a screenshot of the Discord P&L alert into assets/ and reference it here -->
             </div>
           </div>
+
+          <details class="project__media">
+            <summary>View screenshot</summary>
+            <figure>
+            <img src="assets/discord.jpg" alt="Claude Trading Agent posting a trade execution and P&amp;L update to Discord."
+                 loading="lazy" />
+            <figcaption>Discord webhook: weekly trade execution and P&amp;L update.</figcaption>
+            </figure>
+          </details>
         </div>
       </article>
 
@@ -315,7 +322,6 @@ def size_order(equity: float, price: float, open_positions: int) -> int:
               composing two Google APIs cleanly &mdash; Places for discovery, Routes
               for travel-time enrichment &mdash; while keeping the data model strict
               with Pydantic so bad input never reached the scorer.
-              <span class="todo">TODO: confirm / personalize this reflection in your own words.</span>
             </p>
 
             <details class="snippet">
@@ -345,6 +351,15 @@ def score(restaurant, prefs) -&gt; float:
               </a>
             </div>
           </div>
+
+          <details class="project__media">
+            <summary>View screenshot</summary>
+            <figure>
+            <img src="assets/Tavio.jpg" alt="Tavio backend &mdash; restaurant recommendation API response."
+                 loading="lazy" />
+            <figcaption>Recommendation response: ranked restaurants scored against a user&rsquo;s preferences.</figcaption>
+            </figure>
+          </details>
         </div>
       </article>
 
@@ -363,26 +378,44 @@ def score(restaurant, prefs) -&gt; float:
 
           <div class="project__problem">
             <p class="project__field-label">Problem</p>
-            <p class="project__draft">
-              <span class="todo">TODO: in one or two sentences, what real-world problem does Isolytics solve, and who is
-                it for?</span>
+            <p>
+              Fitness data is normally scattered across half a dozen apps &mdash; one
+              for lifts, another for meals, another for cardio, another for progress
+              photos. Isolytics pulls all of it into a single cross-platform mobile
+              app, with an AI assistant for fitness and nutrition questions.
             </p>
           </div>
 
           <div class="project__detail">
             <p class="project__field-label">What it does</p>
-            <p class="project__draft">
-              <span class="todo">TODO: short description of the app + your specific contribution to the team.</span>
+            <p>
+              One Expo + React Native codebase that ships to iOS, Android, and the
+              web. Tracks body composition (body-fat % via the U.S. Navy
+              circumference method), lifts, meals with macros, GPS-tracked cardio
+              runs, and dated progress photos &mdash; all surfaced in a unified
+              history timeline. A Gemini-powered chat answers fitness questions
+              in-app. Auth and per-user data live in Supabase with Row-Level
+              Security; lifts, meals, and photos are cached locally so history
+              works offline.
             </p>
 
             <p class="project__field-label">Stack</p>
             <p class="project__stack">
-              TypeScript &middot; Expo (React Native) &middot; Supabase &middot; npm
+              TypeScript &middot; React Native &middot; Expo &middot; Expo Router
+              &middot; Supabase (Auth + Postgres + RLS) &middot; Google Gemini API
+              &middot; expo-location &middot; expo-camera &middot; AsyncStorage
             </p>
 
             <p class="project__field-label">Process &amp; reflection</p>
             <p class="project__draft">
-              <span class="todo">TODO: your design thinking + one specific challenge you debugged or overcame.</span>
+              Choosing Expo + React Native let the team ship one codebase to three
+              platforms; Expo Router&rsquo;s file-based routing kept the navigation
+              tree obvious as features were added. The two pieces that took the
+              most iteration were the live GPS cardio tracker built on
+              <code>expo-location</code> &mdash; streaming route points, distance,
+              and elevation in real time without draining the battery &mdash; and
+              the Supabase Row-Level Security policies, which had to be airtight so
+              users could never read another user&rsquo;s rows.
             </p>
 
             <div class="project__links">
@@ -391,6 +424,15 @@ def score(restaurant, prefs) -&gt; float:
               </a>
             </div>
           </div>
+
+          <details class="project__media">
+            <summary>View screenshot</summary>
+            <figure>
+            <img src="assets/Isolytics.jpg" alt="Isolytics &mdash; cross-platform fitness tracking app screen."
+                 loading="lazy" />
+            <figcaption>Isolytics: one of the app screens running on iOS.</figcaption>
+            </figure>
+          </details>
         </div>
       </article>
 
@@ -401,7 +443,7 @@ def score(restaurant, prefs) -&gt; float:
           <div class="project__head">
             <h3 class="project__title">Teddy Bear Clinic</h3>
             <ul class="project__tags">
-              <li class="tag tag--accent">Full-stack</li>
+              <li class="tag tag--accent">Nonprofit</li>
               <li class="tag">Team</li>
               <li class="tag">Flask</li>
             </ul>
@@ -409,35 +451,62 @@ def score(restaurant, prefs) -&gt; float:
 
           <div class="project__problem">
             <p class="project__field-label">Problem</p>
-            <p class="project__draft">
-              <span class="todo">TODO: in one or two sentences, what problem does Teddy Bear Clinic solve, and who is it
-                for?</span>
+            <p>
+              Kids often associate doctors, EMTs, and fire trucks with stress and
+              fear &mdash; which makes real emergencies and routine medical visits
+              harder. The Teddy Bear Clinic is a Morris County 501(c)(3) that
+              flips that script: children bring stuffed animals to a free
+              community event for pretend check-ups with real healthcare workers
+              and first responders. The site is its public face.
             </p>
           </div>
 
           <div class="project__detail">
             <p class="project__field-label">What it does</p>
-            <p class="project__draft">
-              <span class="todo">TODO: short description of the app + your specific contribution to the team.</span>
+            <p>
+              The site is the org&rsquo;s signup hub and storytelling surface:
+              registration for the next clinic (2027), the org&rsquo;s mission and
+              team, volunteer and partnership recruitment, a gallery of past
+              events, and sponsor recognition (Nomadics, Morgan Stanley). It
+              supports the nonprofit&rsquo;s ongoing work &mdash; they&rsquo;ve
+              served 750+ children to date.
             </p>
 
             <p class="project__field-label">Stack</p>
             <p class="project__stack">
-              Python &middot; Flask &middot; vanilla HTML, CSS &amp; JavaScript
+              Python &middot; Flask &middot; Jinja templates &middot; vanilla HTML,
+              CSS &amp; JavaScript
             </p>
 
             <p class="project__field-label">Process &amp; reflection</p>
             <p class="project__draft">
-              <span class="todo">TODO: your design thinking + one specific challenge you debugged or overcame.</span>
+              The team chose Flask + server-rendered Jinja templates over a SPA
+              framework for the right reasons here: the site is mostly read-only
+              content with one registration flow, so a single Python process
+              keeps hosting simple, page loads fast, and there&rsquo;s no build
+              step to maintain &mdash; important for a volunteer-run org that
+              has to be able to hand the codebase off.
             </p>
 
             <div class="project__links">
+              <a class="link-btn link-btn--solid" href="https://theteddybearclinic.org" target="_blank" rel="noopener">
+                Visit live site <span aria-hidden="true">&nearr;</span>
+              </a>
               <a class="link-btn" href="https://github.com/emanuelwertman/TeddyBearClinic" target="_blank"
                 rel="noopener">
                 GitHub repository <span aria-hidden="true">&nearr;</span>
               </a>
             </div>
           </div>
+
+          <details class="project__media">
+            <summary>View screenshot</summary>
+            <figure>
+            <img src="assets/TBC.jpg" alt="Teddy Bear Clinic &mdash; live nonprofit website."
+                 loading="lazy" />
+            <figcaption>theteddybearclinic.org &mdash; the deployed nonprofit site.</figcaption>
+            </figure>
+          </details>
         </div>
       </article>
     </section>
@@ -502,14 +571,6 @@ def score(restaurant, prefs) -&gt; float:
     </section>
   </main>
 
-  <!-- ============================ FOOTER ============================ -->
-  <footer class="site-footer">
-    <div class="grid site-footer__inner">
-      <span>Atharva Usturge</span>
-      <span>Designed &amp; built from scratch &mdash; HTML, CSS, JS</span>
-      <span>&copy; <span id="year">2026</span></span>
-    </div>
-  </footer>
 
   <script src="main.js"></script>
   <!-- Optional local-only config. Logs a harmless 404 in dev tools if you
