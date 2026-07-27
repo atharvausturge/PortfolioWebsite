@@ -1,5 +1,5 @@
 /* =============================================================================
-   Live trading ticker — atharvausturge/ClaudeTradingAgent
+   Live trading ticker - atharvausturge/ClaudeTradingAgent
 
    What this does:
      1. Polls the bot's public memory.json every 60s.
@@ -20,7 +20,7 @@
   /* ============================== CONFIG ==============================
      Defaults below. To override (e.g. add your Alpha Vantage key) without
      touching this file, create `ticker.config.local.js` from the
-     `ticker.config.example.js` template — it's gitignored. Any keys it
+     `ticker.config.example.js` template - it's gitignored. Any keys it
      defines on `window.TICKER_CONFIG` win over the defaults here.
      ==================================================================== */
   var DEFAULTS = {
@@ -32,7 +32,7 @@
     FLASH_MS:       1500,             // visual flash duration when data changes
     MEMORY_BUST_MS: 30 * 1000         // memory.json URL cache-bust granularity
   };
-  // Shallow merge — only the keys you set in the local file override defaults.
+  // Shallow merge - only the keys you set in the local file override defaults.
   var CONFIG = {};
   for (var k in DEFAULTS) CONFIG[k] = DEFAULTS[k];
   var overrides = (typeof window !== "undefined" && window.TICKER_CONFIG) || {};
@@ -119,7 +119,7 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         // When over quota, Alpha Vantage returns "Note" or "Information"
-        // (HTTP 200) instead of a "Global Quote" payload — px stays NaN, null is returned.
+        // (HTTP 200) instead of a "Global Quote" payload - px stays NaN, null is returned.
         var q = d && d["Global Quote"];
         var px = q && parseFloat(q["05. price"]);
         if (!px || isNaN(px)) return null;
@@ -175,7 +175,7 @@
       var price, plPct;
       var live = livePrices[p.symbol];
       if (live != null) {
-        // Live price wins — recompute pl_pct from it so the % matches the price.
+        // Live price wins - recompute pl_pct from it so the % matches the price.
         price = live;
         plPct = (price - entry) / entry * 100;
       } else if (typeof p.pl_pct === "number") {

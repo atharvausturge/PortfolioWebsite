@@ -1,5 +1,5 @@
 /* =============================================================================
-   Atharva Usturge — Portfolio
+   Atharva Usturge - Portfolio
    Small, dependency-free enhancements. Everything here is progressive: the
    page is fully readable with JavaScript disabled.
    ========================================================================== */

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Atharva Usturge — Portfolio
+   Atharva Usturge - Portfolio
    Swiss / International Typographic Style: strict grid, bold type scale,
    warm paper + near-black ink + a single red accent. No webfonts, no
    gradients, no glow. Structure is the decoration.
@@ -12,7 +12,7 @@
   --paper-2:    #dfdcd3;   /* slightly deeper panel */
   --ink:        #16140f;   /* near-black, faintly warm */
   --ink-soft:   #5c574c;   /* muted secondary text */
-  --accent:     #2c4f8a;   /* cobalt — brand accent */
+  --accent:     #2c4f8a;   /* cobalt - brand accent */
   --loss:       #d94a3a;   /* semantic loss color (ticker downside) */
   --green:      #34c97a;   /* semantic gain color (ticker upside) */
   --rule:       rgba(22, 20, 15, 0.16);
@@ -238,7 +238,7 @@ img, iframe { max-width: 100%; display: block; }
   text-transform: none;
 }
 /* padding-bottom extends the clip box so descenders (g, y, j) aren't cut off.
-   line-height stays tight at 0.9 — only the clip region grows. */
+   line-height stays tight at 0.9 - only the clip region grows. */
 .hero__heading .line { display: block; overflow: hidden; padding-bottom: 0.12em; }
 /* Each line slides up from its clipped container on load (no observer needed). */
 .hero__heading .line > span {
@@ -452,6 +452,15 @@ img, iframe { max-width: 100%; display: block; }
 }
 .awards li span { color: var(--accent); font-weight: 700; }
 .about__aside-note { font-size: 0.96rem; line-height: 1.45; color: var(--ink-soft); }
+/* Promoted note — used for the "Incoming" Vise callout. Full-ink text,
+   cobalt on the strong tags to match the accent used in the bio. */
+.about__aside-note--highlight {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+.about__aside-note--highlight strong { color: var(--accent); }
 
 /* Skills */
 .skills {
@@ -572,7 +581,7 @@ img, iframe { max-width: 100%; display: block; }
 .project:hover .project__draft code { background: var(--paper); }
 .project__draft em { font-weight: 700; color: var(--accent); font-style: normal; }
 
-/* TODO markers — deliberately visible so they don't ship by accident */
+/* TODO markers - deliberately visible so they don't ship by accident */
 .todo {
   display: inline;
   font-family: var(--mono);
@@ -620,7 +629,7 @@ img, iframe { max-width: 100%; display: block; }
   letter-spacing: 0.08em;
 }
 
-/* Project media — collapsed by default; click "View screenshot" to expand.
+/* Project media - collapsed by default; click "View screenshot" to expand.
    Mirrors the .snippet pattern so the page reads with one consistent toggle idiom. */
 .project__media {
   grid-column: 3 / -1;

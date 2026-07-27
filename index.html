@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atharva Usturge — Portfolio</title>
+  <title>Atharva Usturge · Portfolio</title>
   <meta name="description"
-    content="Atharva Usturge — Computer &amp; Information Sciences student engineering toward Financial Technology. Selected work in trading automation, accessibility, and full-stack development." />
-  <link rel="stylesheet" href="style.css?v=2" />
+    content="Atharva Usturge: Computer &amp; Information Sciences student engineering toward Financial Technology. Selected work in trading automation, accessibility, and full-stack development." />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 
 <body>
@@ -54,7 +54,7 @@
   <!-- ============================ HEADER / NAV ============================ -->
   <header class="site-header" id="top">
     <div class="grid site-header__inner">
-      <a class="wordmark" href="#top" aria-label="Atharva Usturge — home">
+      <a class="wordmark" href="#top" aria-label="Atharva Usturge, home">
         <span class="wordmark__name">Atharva Usturge</span>
         <span class="wordmark__dot" aria-hidden="true"></span>
       </a>
@@ -80,7 +80,7 @@
       <div class="grid hero__inner">
         <div class="hero__meta">
           <span>Portfolio</span>
-          <span>2025 &mdash; 26</span>
+          <span>2025 / 26</span>
           <span>Mt. Olive, NJ</span>
         </div>
 
@@ -90,8 +90,8 @@
         </h1>
 
         <p class="hero__lede">
-          I build software &mdash;
-          <strong>finance</strong>, <strong>accessibility</strong>, <strong>robots</strong>.
+          I build software for
+          <strong>finance</strong>, <strong>accessibility</strong>, and <strong>robots</strong>.
         </p>
 
         <div class="hero__contact">
@@ -111,7 +111,7 @@
 
         <div class="about__body">
           <h2 class="about__heading" id="about-heading" data-reveal>
-            I build software across the stack &mdash; from autonomous trading
+            I build software across the stack, from autonomous trading
             systems to accessibility-focused APIs.
           </h2>
 
@@ -127,24 +127,33 @@
               </p>
               <p>
                 My goal is a career in <strong>Financial Technology</strong>, where
-                rigorous engineering meets real financial decision-making. The
-                projects below reflect that direction &mdash; market analysis and
-                trade automation, alongside the full-stack and accessibility work
-                that taught me how to ship reliable software end to end.
+                rigorous engineering meets real financial decision-making. I have
+                accepted a <strong>Quantitative Researcher</strong> internship at
+                <strong>Vise</strong>, a portfolio-management platform for
+                independent financial advisors. The projects below reflect that
+                direction: market analysis and trade automation, alongside the
+                full-stack and accessibility work that taught me how to ship
+                reliable software end to end.
               </p>
             </div>
 
             <aside class="about__aside" data-reveal>
+              <p class="about__aside-label">Incoming</p>
+              <p class="about__aside-note about__aside-note--highlight">
+                <strong>Quantitative Researcher</strong> intern at
+                <strong>Vise</strong>, a FinTech portfolio-management platform.
+              </p>
+
               <p class="about__aside-label">Recognition</p>
               <ul class="awards">
-                <li><span aria-hidden="true">&rsaquo;</span> International Computer Science Competition &mdash; Finalist
-                </li>
-                <li><span aria-hidden="true">&rsaquo;</span> Garden State CTF &mdash; Top 20</li>
-                <li><span aria-hidden="true">&rsaquo;</span> picoCTF &mdash; Top 20</li>
+                <li><span aria-hidden="true">&rsaquo;</span> International Computer Science Competition: Finalist</li>
+                <li><span aria-hidden="true">&rsaquo;</span> Garden State CTF: Top 20</li>
+                <li><span aria-hidden="true">&rsaquo;</span> picoCTF: Top 20</li>
               </ul>
+
               <p class="about__aside-label">Currently</p>
               <p class="about__aside-note">
-                Lead Programmer, FRC Team 8588 &mdash; control systems, sensor
+                Lead Programmer, FRC Team 8588: control systems, sensor
                 integration, and motion planning for competitive robotics.
               </p>
             </aside>
@@ -205,9 +214,9 @@
             <p class="project__field-label">Problem</p>
             <p>
               Active swing trading demands constant screening, sentiment reading,
-              and disciplined execution &mdash; work that is easy to do
-              inconsistently by hand. This agent automates the full loop so that a
-              systematic strategy runs unattended.
+              and disciplined execution, work that is easy to do inconsistently
+              by hand. This agent automates the full loop so that a systematic
+              strategy runs unattended.
             </p>
           </div>
 
@@ -217,7 +226,7 @@
               Scans 254 large-cap stocks weekly for trend (60-day relative strength
               vs. SPY) and dip signals, layers in news and social sentiment, then
               places risk-managed orders on Alpaca and posts P&amp;L to Discord.
-              The entire system runs on scheduled GitHub Actions &mdash; no server.
+              The entire system runs on scheduled GitHub Actions. No server.
             </p>
 
             <p class="project__field-label">Stack</p>
@@ -230,9 +239,9 @@
 
             <p class="project__field-label">Process &amp; reflection</p>
             <p class="project__draft">
-              I split the bot into a clear pipeline &mdash;
-              <code>research &rarr; analyze &rarr; execute &rarr; monitor</code>
-              &mdash; so each stage could be tested on its own. The hardest part was
+              I split the bot into a clear pipeline
+              (<code>research &rarr; analyze &rarr; execute &rarr; monitor</code>)
+              so each stage could be tested on its own. The hardest part was
               that GitHub Actions runs are <em>stateless</em>: every run starts cold,
               with no memory of open positions. I solved it by persisting trade
               history and portfolio snapshots to <code>memory.json</code> and
@@ -241,8 +250,8 @@
             </p>
 
             <details class="snippet">
-              <summary>View code &mdash; position sizing</summary>
-              <pre><code># risk.py — fixed-fractional position sizing with a hard cap
+              <summary>View code: position sizing</summary>
+              <pre><code># risk.py: fixed-fractional position sizing with a hard cap
 MAX_POSITIONS = 3      # never hold more than three names at once
 ALLOCATION    = 0.20   # commit 20% of equity per position
 STOP_LOSS     = 0.05   # 5% protective stop on every entry
@@ -254,7 +263,7 @@ def size_order(equity: float, price: float, open_positions: int) -> int:
     dollars = equity * ALLOCATION     # dollars allotted to this trade
     return int(dollars // price)      # brokers fill whole shares only
 </code></pre>
-              <p class="snippet__note">Representative logic &mdash; full source on GitHub.</p>
+              <p class="snippet__note">Representative logic. Full source on GitHub.</p>
             </details>
 
             <div class="project__links">
@@ -319,14 +328,14 @@ def size_order(equity: float, price: float, open_positions: int) -> int:
               I designed the recommendation engine as a weighted blend of independent
               match functions, each returning a 0&ndash;1 score, so I could tune one
               dimension without breaking the others. The trickiest piece was
-              composing two Google APIs cleanly &mdash; Places for discovery, Routes
-              for travel-time enrichment &mdash; while keeping the data model strict
+              composing two Google APIs cleanly (Places for discovery, Routes
+              for travel-time enrichment) while keeping the data model strict
               with Pydantic so bad input never reached the scorer.
             </p>
 
             <details class="snippet">
-              <summary>View code &mdash; weighted match score</summary>
-              <pre><code># recommend.py — blend per-dimension matches into one ranking score
+              <summary>View code: weighted match score</summary>
+              <pre><code># recommend.py: blend per-dimension matches into one ranking score
 WEIGHTS = {"cuisine": 0.30, "dietary": 0.25, "allergens": 0.20,
            "spice": 0.10, "price": 0.10, "travel": 0.05}
 
@@ -342,7 +351,7 @@ def score(restaurant, prefs) -&gt; float:
     }
     return sum(WEIGHTS[k] * v for k, v in parts.items())
 </code></pre>
-              <p class="snippet__note">Representative logic &mdash; full source on GitHub.</p>
+              <p class="snippet__note">Representative logic. Full source on GitHub.</p>
             </details>
 
             <div class="project__links">
@@ -355,7 +364,7 @@ def score(restaurant, prefs) -&gt; float:
           <details class="project__media">
             <summary>View screenshot</summary>
             <figure>
-            <img src="assets/Tavio.jpg" alt="Tavio backend &mdash; restaurant recommendation API response."
+            <img src="assets/Tavio.jpg" alt="Tavio backend: restaurant recommendation API response."
                  loading="lazy" />
             <figcaption>Recommendation response: ranked restaurants scored against a user&rsquo;s preferences.</figcaption>
             </figure>
@@ -379,7 +388,7 @@ def score(restaurant, prefs) -&gt; float:
           <div class="project__problem">
             <p class="project__field-label">Problem</p>
             <p>
-              Fitness data is normally scattered across half a dozen apps &mdash; one
+              Fitness data is normally scattered across half a dozen apps: one
               for lifts, another for meals, another for cardio, another for progress
               photos. Isolytics pulls all of it into a single cross-platform mobile
               app, with an AI assistant for fitness and nutrition questions.
@@ -392,7 +401,7 @@ def score(restaurant, prefs) -&gt; float:
               One Expo + React Native codebase that ships to iOS, Android, and the
               web. Tracks body composition (body-fat % via the U.S. Navy
               circumference method), lifts, meals with macros, GPS-tracked cardio
-              runs, and dated progress photos &mdash; all surfaced in a unified
+              runs, and dated progress photos, all surfaced in a unified
               history timeline. A Gemini-powered chat answers fitness questions
               in-app. Auth and per-user data live in Supabase with Row-Level
               Security; lifts, meals, and photos are cached locally so history
@@ -412,8 +421,8 @@ def score(restaurant, prefs) -&gt; float:
               platforms; Expo Router&rsquo;s file-based routing kept the navigation
               tree obvious as features were added. The two pieces that took the
               most iteration were the live GPS cardio tracker built on
-              <code>expo-location</code> &mdash; streaming route points, distance,
-              and elevation in real time without draining the battery &mdash; and
+              <code>expo-location</code> (streaming route points, distance,
+              and elevation in real time without draining the battery), and
               the Supabase Row-Level Security policies, which had to be airtight so
               users could never read another user&rsquo;s rows.
             </p>
@@ -428,7 +437,7 @@ def score(restaurant, prefs) -&gt; float:
           <details class="project__media">
             <summary>View screenshot</summary>
             <figure>
-            <img src="assets/Isolytics.jpg" alt="Isolytics &mdash; cross-platform fitness tracking app screen."
+            <img src="assets/Isolytics.jpg" alt="Isolytics: cross-platform fitness tracking app screen."
                  loading="lazy" />
             <figcaption>Isolytics: one of the app screens running on iOS.</figcaption>
             </figure>
@@ -453,7 +462,7 @@ def score(restaurant, prefs) -&gt; float:
             <p class="project__field-label">Problem</p>
             <p>
               Kids often associate doctors, EMTs, and fire trucks with stress and
-              fear &mdash; which makes real emergencies and routine medical visits
+              fear, which makes real emergencies and routine medical visits
               harder. The Teddy Bear Clinic is a Morris County 501(c)(3) that
               flips that script: children bring stuffed animals to a free
               community event for pretend check-ups with real healthcare workers
@@ -468,7 +477,7 @@ def score(restaurant, prefs) -&gt; float:
               registration for the next clinic (2027), the org&rsquo;s mission and
               team, volunteer and partnership recruitment, a gallery of past
               events, and sponsor recognition (Nomadics, Morgan Stanley). It
-              supports the nonprofit&rsquo;s ongoing work &mdash; they&rsquo;ve
+              supports the nonprofit&rsquo;s ongoing work: they&rsquo;ve
               served 750+ children to date.
             </p>
 
@@ -484,7 +493,7 @@ def score(restaurant, prefs) -&gt; float:
               framework for the right reasons here: the site is mostly read-only
               content with one registration flow, so a single Python process
               keeps hosting simple, page loads fast, and there&rsquo;s no build
-              step to maintain &mdash; important for a volunteer-run org that
+              step to maintain, important for a volunteer-run org that
               has to be able to hand the codebase off.
             </p>
 
@@ -502,9 +511,9 @@ def score(restaurant, prefs) -&gt; float:
           <details class="project__media">
             <summary>View screenshot</summary>
             <figure>
-            <img src="assets/TBC.jpg" alt="Teddy Bear Clinic &mdash; live nonprofit website."
+            <img src="assets/TBC.jpg" alt="Teddy Bear Clinic: live nonprofit website."
                  loading="lazy" />
-            <figcaption>theteddybearclinic.org &mdash; the deployed nonprofit site.</figcaption>
+            <figcaption>theteddybearclinic.org, the deployed nonprofit site.</figcaption>
             </figure>
           </details>
         </div>
