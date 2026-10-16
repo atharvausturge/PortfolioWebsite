@@ -631,10 +631,7 @@ img, iframe { max-width: 100%; display: block; }
 
 /* Project media - collapsed by default; click "View screenshot" to expand.
    Mirrors the .snippet pattern so the page reads with one consistent toggle idiom. */
-.project__media {
-  grid-column: 3 / -1;
-  margin: 2rem 0 0;
-}
+.project__media { margin: 1.6rem 0 0; }
 .project__media > summary {
   cursor: pointer;
   font-family: var(--mono);
@@ -653,7 +650,9 @@ img, iframe { max-width: 100%; display: block; }
 .project__media > summary:focus-visible { color: var(--ink); }
 .project__media figure { margin: 1.2rem 0 0; }
 .project__media img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 480px;   /* keeps tall phone screenshots (e.g. Isolytics) from towering */
+  width: auto;
   height: auto;
   display: block;
   border: 1px solid var(--ink);
@@ -734,7 +733,7 @@ img, iframe { max-width: 100%; display: block; }
   color: var(--ink-soft);
 }
 .resume__signature-values { font-size: 1rem; letter-spacing: 0.02em; }
-.resume__actions { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.resume__actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
 .resume__preview { margin-top: 2.5rem; }
 .resume__preview iframe {
   width: 100%;
@@ -833,7 +832,6 @@ img, iframe { max-width: 100%; display: block; }
   .project__head { grid-column: 3 / span 9; }
   .project__problem { grid-column: 3 / span 9; }
   .project__detail  { grid-column: 3 / span 9; }
-  .project__media   { grid-column: 3 / span 9; }
 }
 
 /* Mobile ----------------------------------------------------------------- */
@@ -885,8 +883,7 @@ img, iframe { max-width: 100%; display: block; }
   .project__index { grid-column: 1 / span 12; }
   .project__head,
   .project__problem,
-  .project__detail,
-  .project__media { grid-column: 1 / span 12; }
+  .project__detail { grid-column: 1 / span 12; }
 
   .contact__list li { grid-template-columns: 1fr; gap: 0.3rem; }
 
