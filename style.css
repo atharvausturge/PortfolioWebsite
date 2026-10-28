@@ -542,6 +542,24 @@ img, iframe { max-width: 100%; display: block; }
   color: var(--ink);
 }
 .tag--accent { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+/* Live-but-unfinished marker: dashed border + pulsing dot reads as "work in progress" */
+.tag--status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-style: dashed;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.tag--status::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: statusPulse 1.6s ease-in-out infinite;
+}
+@keyframes statusPulse { 50% { opacity: 0.25; } }
 
 .project__problem {
   grid-column: 3 / span 4;
@@ -669,6 +687,14 @@ img, iframe { max-width: 100%; display: block; }
 
 /* Links / buttons */
 .project__links { margin-top: 1.8rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.project__note {
+  margin-top: 0.8rem;
+  font-family: var(--mono);
+  font-size: var(--fs-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
 .link-btn {
   display: inline-flex;
   align-items: center;
