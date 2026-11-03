@@ -6,649 +6,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atharva Usturge · Portfolio</title>
   <meta name="description"
-    content="Atharva Usturge: Computer &amp; Information Sciences student engineering toward Financial Technology. Selected work in trading automation, accessibility, and full-stack development." />
+    content="Atharva Usturge: Quantitative Research Intern at Vise and senior at Morris County School of Technology. Software for finance, accessibility, and robots." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
+<a class="skip" href="#work">Skip to projects</a>
 
-  <!-- ============== LIVE "NOW SHIPPING" TICKER (above the sticky header) ===== -->
-  <!-- Sits above the header so it scrolls off naturally and never collides with
-       the sticky nav. Decorative; full content lives in the page below. -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <!-- Two identical copies of the list so the loop is seamless. -->
-      <span class="ticker__item ticker__item--lead">&#9656; Now shipping</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Claude Trading Agent <em>+98.5% 2y backtest</em></span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Tavio &middot; accessibility backend</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">FRC 8588 &middot; robot software</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">ICSC &middot; Finalist</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Top 20 &middot; picoCTF</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Top 20 &middot; Garden State CTF</span>
-      <span class="ticker__sep">/</span>
+<header><div class="wrap">
+  <a class="au" href="#top">AU</a>
+  <nav aria-label="Primary">
+    <a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a>
+    <a class="resume" href="AtharvaUsturge-ResumeCopy.pdf">Résumé</a>
+  </nav>
+</div></header>
 
-      <span class="ticker__item ticker__item--lead">&#9656; Now shipping</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Claude Trading Agent <em>+98.5% 2y backtest</em></span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Tavio &middot; accessibility backend</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">FRC 8588 &middot; robot software</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">ICSC &middot; Finalist</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Top 20 &middot; picoCTF</span>
-      <span class="ticker__sep">/</span>
-      <span class="ticker__item">Top 20 &middot; Garden State CTF</span>
-      <span class="ticker__sep">/</span>
+<main id="top">
+  <div class="band">
+    <section class="wrap hero">
+      <h1>Atharva<br>Usturge</h1>
+      <div class="side">
+        <p>I build software for finance, accessibility, and robots.</p>
+        <small>Quantitative Research Intern at Vise. Senior at Morris County School of Technology, NJ.</small>
+        <a class="btn-on" href="#work">See my work</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Project grid -->
+  <section class="grid" aria-label="Projects overview">
+    <a class="tile tile--big" href="#offrpath"><span class="k">Live now</span><div class="shot"><img src="assets/Offrpath.png" alt="Offrpath landing page"></div><div><h2>Offrpath</h2><p>Interview practice where you review code an AI wrote. In beta, open to try.</p></div></a>
+    <a class="tile" href="#trading"><div class="shot"><img src="assets/trading-discord.jpg" alt="Trading bot posting to Discord"></div><div><h2>Claude Trading Agent</h2><p>Runs itself weekly. +98.5% in a 2-year backtest.</p></div></a>
+    <a class="tile" href="#tavio"><div class="shot"><span class="phone"><img src="assets/tavio-screen.png" alt="Tavio app screen"></span></div><div><h2>Tavio</h2><p>Restaurant finder for blind diners. 4th in NJ.</p></div></a>
+    <a class="tile" href="#isolytics"><div class="shot"><span class="phone"><img src="assets/isolytics-screen.png" alt="Isolytics app on iOS"></span></div><div><h2>Isolytics</h2><p>One fitness app for iOS, Android, and web.</p></div></a>
+    <a class="tile" href="#tbc"><div class="shot"><img src="assets/tbc-site.jpg" alt="Teddy Bear Clinic website"></div><div><h2>Teddy Bear Clinic</h2><p>Nonprofit site. 750+ kids served.</p></div></a>
+  </section>
+
+  <!-- Project details -->
+  <div class="wrap" id="work">
+    <div class="section-title"><h2>Projects</h2><span>Five projects, two live today</span></div>
+  </div>
+
+  <article class="project" id="offrpath">
+    <div class="project__shot"><img src="assets/Offrpath.png" alt="Offrpath landing page" loading="lazy"></div>
+    <div class="project__text">
+      <h3>Offrpath</h3>
+      <p class="project__line">Practice for the coding interview where the AI writes the code.</p>
+      <div class="facts"><span class="fact fact--live">Live, in progress</span><span class="fact">EdTech</span><span class="fact">AI</span></div>
+      <div><h4>Problem</h4><p>Coding interviews are shifting from writing code to judging it. An AI can write a working function in seconds, but some of what it writes is buggy or unsafe, and the skill being tested is knowing which.</p></div>
+      <div><h4>What it does</h4><p>You review simulated pull requests from an AI assistant and flag lines as bugs, edge cases, security holes, performance issues, or readability problems. It shows what you caught and missed, line by line, and later PRs target your weak spots. A second mode, Trust or Reject, asks whether to accept, reject, or modify the AI's code.</p></div>
+      <p class="stack">Next.js, React, Supabase (Postgres), Vercel</p>
+      <div class="links"><a class="btn btn--solid" href="https://offrpath.vercel.app" target="_blank" rel="noopener">Test it now ↗</a></div>
+    </div>
+  </article>
+
+  <article class="project" id="trading">
+    <div class="project__shot"><img src="assets/trading-discord.jpg" alt="Trade execution and P&amp;L update posted to Discord" loading="lazy"></div>
+    <div class="project__text">
+      <h3>Claude Trading Agent</h3>
+      <p class="project__line">A swing-trading bot that runs unattended on GitHub Actions. No server.</p>
+      <div class="facts"><span class="fact">+98.5% in a 2-year backtest</span><span class="fact">254 stocks screened weekly</span><span class="fact">FinTech</span></div>
+      <div><h4>Problem</h4><p>Swing trading needs constant screening, sentiment reading, and disciplined execution, which is easy to do inconsistently by hand.</p></div>
+      <div><h4>What it does</h4><p>Scans 254 large-cap stocks every week for trend and dip signals, layers in news and social sentiment, then places risk-managed orders on Alpaca and posts P&amp;L to Discord.</p></div>
+      <p class="stack">Python, pandas, alpaca-py, Groq (Llama 3.3 70B), Claude, GitHub Actions, Discord webhooks</p>
+      <div class="links"><a class="btn" href="https://github.com/atharvausturge/ClaudeTradingAgent" target="_blank" rel="noopener">GitHub repository ↗</a></div>
+    </div>
+  </article>
+
+  <article class="project" id="tavio">
+    <div class="project__shot"><span class="phone"><img src="assets/tavio-screen.png" alt="Tavio app showing nearby restaurants" loading="lazy"></span></div>
+    <div class="project__text">
+      <h3>Tavio</h3>
+      <p class="project__line">Restaurant discovery that works for blind and visually impaired diners.</p>
+      <div class="facts"><span class="fact">4th statewide, NJ TSA</span><span class="fact">Accessibility</span><span class="fact">REST API</span></div>
+      <div><h4>Problem</h4><p>Finding a restaurant that fits your needs is hard when you can't scan a menu by sight.</p></div>
+      <div><h4>What it does</h4><p>Finds nearby places through Google Places, adds travel time from Google Routes, and returns the top three matches for a user's cuisine, dietary, allergen, spice, price, and travel-time preferences.</p></div>
+      <p class="stack">FastAPI, PostgreSQL, SQLAlchemy, Pydantic, Google Places and Routes APIs</p>
+      <div class="links"><a class="btn" href="https://github.com/atharvausturge/Tavio-Backend" target="_blank" rel="noopener">GitHub repository ↗</a></div>
+    </div>
+  </article>
+
+  <article class="project" id="isolytics">
+    <div class="project__shot"><span class="phone"><img src="assets/isolytics-screen.png" alt="Isolytics home screen on iOS" loading="lazy"></span></div>
+    <div class="project__text">
+      <h3>Isolytics</h3>
+      <p class="project__line">Lifts, meals, runs, and progress photos in one app.</p>
+      <div class="facts"><span class="fact">iOS, Android, web</span><span class="fact">Team project</span><span class="fact">Mobile</span></div>
+      <div><h4>What it does</h4><p>One Expo and React Native codebase that tracks body fat, lifts, meals with macros, GPS cardio runs, and dated progress photos, with a Gemini-powered chat for fitness questions. History works offline.</p></div>
+      <p class="stack">TypeScript, React Native, Expo, Supabase, Gemini API</p>
+      <div class="links"><a class="btn" href="https://github.com/ayaang12/isolytics" target="_blank" rel="noopener">GitHub repository ↗</a></div>
+    </div>
+  </article>
+
+  <article class="project" id="tbc">
+    <div class="project__shot"><img src="assets/tbc-site.jpg" alt="Teddy Bear Clinic website" loading="lazy"></div>
+    <div class="project__text">
+      <h3>Teddy Bear Clinic</h3>
+      <p class="project__line">The public site for a Morris County nonprofit that makes kids less afraid of doctors.</p>
+      <div class="facts"><span class="fact fact--live">Live</span><span class="fact">750+ kids served</span><span class="fact">Nonprofit</span></div>
+      <div><h4>What it does</h4><p>Children bring stuffed animals to a free event for pretend check-ups with real healthcare workers. The site handles registration for the 2027 clinic, the mission and team, volunteer and sponsor pages, and a gallery of past events.</p></div>
+      <div><h4>Why Flask</h4><p>The site is mostly read-only with one sign-up flow, so server-rendered templates keep hosting simple and leave no build step for volunteers to maintain.</p></div>
+      <p class="stack">Python, Flask, Jinja, HTML, CSS, JavaScript</p>
+      <div class="links"><a class="btn btn--solid" href="https://theteddybearclinic.org" target="_blank" rel="noopener">Visit live site ↗</a></div>
+    </div>
+  </article>
+
+  <!-- Experience, recognition, skills -->
+  <div class="wrap" id="experience">
+    <div class="section-title"><h2>Experience</h2><span>Work, awards, and tools</span></div>
+    <div class="three">
+      <div>
+        <h3>Work</h3>
+        <ul class="list">
+          <li><b>Quantitative Research Intern, Vise</b><span>Now</span><p>Research for a portfolio-management platform used by independent financial advisors.</p></li>
+          <li><b>Lead Programmer, FRC Team 8588</b><span>Robotics</span><p>Control systems, sensor integration, and motion planning for competition robots.</p></li>
+          <li><b>Academy of Computer &amp; Information Sciences</b><span>Morris County School of Technology</span><p>With dual-enrollment courses at County College of Morris.</p></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recognition</h3>
+        <ul class="list">
+          <li><span class="res">Finalist</span><b>International Computer Science Competition</b></li>
+          <li><span class="res">4th</span><b>NJ TSA Software Development</b><span>Statewide, with Tavio</span></li>
+          <li><span class="res">Top 20</span><b>Garden State CTF</b></li>
+          <li><span class="res">Top 20</span><b>picoCTF</b></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Skills</h3>
+        <p class="label">Languages</p>
+        <ul class="chips"><li>Python</li><li>Java</li><li>C++</li><li>JavaScript</li><li>TypeScript</li><li>R</li><li>HTML</li><li>CSS</li></ul>
+        <p class="label">Tools and frameworks</p>
+        <ul class="chips"><li>FastAPI</li><li>Flask</li><li>React</li><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>GitHub Actions</li><li>WPILib</li><li>Git</li><li>Linux</li></ul>
+      </div>
     </div>
   </div>
 
-  <!-- ============================ HEADER / NAV ============================ -->
-  <header class="site-header" id="top">
-    <div class="grid site-header__inner">
-      <a class="wordmark" href="#top" aria-label="Atharva Usturge, home">
-        <span class="wordmark__name">Atharva Usturge</span>
-        <span class="wordmark__dot" aria-hidden="true"></span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list">
-          <span class="nav__toggle-label">Menu</span>
-          <span class="nav__toggle-bars" aria-hidden="true"><i></i><i></i></span>
-        </button>
-        <ul class="nav__list" id="nav-list">
-          <li><a href="#about"><span class="nav__num">01</span>About</a></li>
-          <li><a href="#work"><span class="nav__num">02</span>Work</a></li>
-          <li><a href="#resume"><span class="nav__num">03</span>Résumé</a></li>
-          <li><a href="#contact"><span class="nav__num">04</span>Contact</a></li>
-        </ul>
-      </nav>
+  <section class="wrap about" id="about">
+    <h2>About</h2>
+    <div>
+      <p>I'm a senior in the Academy of Computer &amp; Information Sciences at Morris County School of Technology, with dual-enrollment courses at County College of Morris. I work most in Python and Java, and I'm drawn to the infrastructure that makes software dependable: automation, clean APIs, and systems that keep running without supervision.</p>
+      <p>My goal is a career in financial technology, where careful engineering meets real financial decisions. That's why I'm a quantitative research intern at Vise, and why I built the trading agent. The full-stack and accessibility projects taught me how to ship reliable software end to end.</p>
     </div>
-  </header>
+  </section>
+</main>
 
-  <main>
-    <!-- ============================ HERO ============================ -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="grid hero__inner">
-        <div class="hero__meta">
-          <span>Portfolio</span>
-          <span>2026 / 27</span>
-          <span>Mt. Olive, NJ</span>
-        </div>
-
-        <h1 class="hero__heading" id="hero-heading">
-          <span class="line"><span>Atharva</span></span>
-          <span class="line line--accent"><span>Usturge.</span></span>
-        </h1>
-
-        <p class="hero__lede">
-          I build software for
-          <strong>finance</strong>, <strong>accessibility</strong>, and <strong>robots</strong>.
-        </p>
-
-        <div class="hero__contact">
-          <a href="mailto:atharva.usturge@gmail.com">atharva.usturge@gmail.com</a>
-          <span class="hero__contact-dot" aria-hidden="true">&middot;</span>
-          <a href="https://github.com/atharvausturge" target="_blank" rel="noopener">github/atharvausturge</a>
-        </div>
+<footer class="band" id="contact">
+  <div class="wrap contact">
+    <h2>Let's talk.</h2>
+    <div class="row">
+      <a class="email" href="mailto:atharva.usturge@gmail.com">atharva.usturge@gmail.com</a>
+      <div class="others">
+        <a href="AtharvaUsturge-ResumeCopy.pdf"><span>Résumé (PDF)</span><span>↓</span></a>
+        <a href="https://github.com/atharvausturge" target="_blank" rel="noopener"><span>GitHub</span><span>↗</span></a>
+        <a href="https://www.linkedin.com/in/atharva-usturge-a80535349/" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>
       </div>
-    </section>
-
-
-
-    <!-- ============================ ABOUT ============================ -->
-    <section class="section about" id="about" aria-labelledby="about-heading">
-      <div class="grid">
-        <p class="section__label">01 / About</p>
-
-        <div class="about__body">
-          <h2 class="about__heading" id="about-heading" data-reveal>
-            I build software across the stack, from autonomous trading
-            systems to accessibility-focused APIs.
-          </h2>
-
-          <div class="about__cols">
-            <div class="about__bio" data-reveal>
-              <p>
-                I am a rising senior in the Academy of Computer &amp; Information
-                Sciences at Morris County School of Technology, where I also
-                complete dual-enrollment coursework through the County College of
-                Morris. I work most often in Python and Java, and I am drawn to the
-                infrastructure that makes software dependable: automation, clean
-                APIs, and systems that keep running without supervision.
-              </p>
-              <p>
-                My goal is a career in <strong>Financial Technology</strong>, where
-                rigorous engineering meets real financial decision-making. I am
-                currently a <strong>Quantitative Researcher</strong> intern at
-                <strong>Vise</strong>, a portfolio-management platform for
-                independent financial advisors. The projects below reflect that
-                direction: market analysis and trade automation, alongside the
-                full-stack and accessibility work that taught me how to ship
-                reliable software end to end.
-              </p>
-            </div>
-
-            <aside class="about__aside" data-reveal>
-              <p class="about__aside-label">Currently</p>
-              <p class="about__aside-note about__aside-note--highlight">
-                <strong>Quantitative Researcher</strong> intern at
-                <strong>Vise</strong>, a FinTech portfolio-management platform.
-              </p>
-              <p class="about__aside-note">
-                Lead Programmer, FRC Team 8588: control systems, sensor
-                integration, and motion planning for competitive robotics.
-              </p>
-
-              <p class="about__aside-label">Recognition</p>
-              <ul class="awards">
-                <li><span aria-hidden="true">&rsaquo;</span> International Computer Science Competition: Finalist</li>
-                <li><span aria-hidden="true">&rsaquo;</span> NJ TSA Software Development: 4th place, statewide</li>
-                <li><span aria-hidden="true">&rsaquo;</span> Garden State CTF: Top 20</li>
-                <li><span aria-hidden="true">&rsaquo;</span> picoCTF: Top 20</li>
-              </ul>
-            </aside>
-          </div>
-
-          <!-- Skills -->
-          <div class="skills" data-reveal>
-            <div class="skills__group">
-              <p class="skills__label">Languages</p>
-              <ul class="skills__list">
-                <li>Java</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>JavaScript</li>
-                <li>R</li>
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-            <div class="skills__group">
-              <p class="skills__label">Tools &amp; Frameworks</p>
-              <ul class="skills__list">
-                <li>Git</li>
-                <li>FastAPI</li>
-                <li>REST APIs</li>
-                <li>Linux</li>
-                <li>WPILib</li>
-                <li>VS Code</li>
-                <li>CLI</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ WORK ============================ -->
-    <section class="section work" id="work" aria-labelledby="work-heading">
-      <div class="grid">
-        <p class="section__label">02 / Selected Work</p>
-        <h2 class="work__heading" id="work-heading">Projects.</h2>
-      </div>
-
-      <!-- ---- Project 01 ---- -->
-      <article class="project" id="project-1" data-reveal>
-        <div class="grid project__inner">
-          <div class="project__index"><span>01</span></div>
-          <div class="project__head">
-            <h3 class="project__title">Offrpath</h3>
-            <ul class="project__tags">
-              <li class="tag tag--status">In progress</li>
-              <li class="tag tag--accent">EdTech</li>
-              <li class="tag">AI</li>
-              <li class="tag">Next.js</li>
-            </ul>
-          </div>
-
-          <div class="project__problem">
-            <p class="project__field-label">Problem</p>
-            <p>
-              Coding interviews are shifting from writing code to judging it. An
-              AI can produce a working function in seconds, but some of what it
-              writes is buggy or unsafe, and the skill being tested is knowing
-              which. Most interview prep still only drills writing solutions
-              from scratch.
-            </p>
-
-            <details class="project__media">
-              <summary>View screenshot</summary>
-              <figure>
-                <img src="assets/Offrpath.png" alt="Offrpath: practice the coding interview where the AI writes the code." loading="lazy" />
-                <figcaption>offrpath.vercel.app, live and still being built.</figcaption>
-              </figure>
-            </details>
-          </div>
-
-          <div class="project__detail">
-            <p class="project__field-label">What it does</p>
-            <p>
-              A free practice site for the new kind of interview. You review
-              simulated pull requests from an AI assistant (a password reset, a
-              checkout, a webhook) and flag lines as bugs, edge cases, security
-              holes, performance issues, or readability problems. Afterward it
-              shows what you caught and what you missed, with line-level
-              explanations, and later PRs target your weak spots. A second mode,
-              Trust or Reject, gives you a task plus the AI&rsquo;s code and asks
-              whether to accept, reject, or modify it.
-            </p>
-
-            <p class="project__field-label">Stack</p>
-            <p class="project__stack">
-              Next.js &middot; React &middot; Supabase (Postgres) &middot; Vercel
-              &middot; Python review exercises
-            </p>
-
-            <div class="project__links">
-              <a class="link-btn link-btn--solid" href="https://offrpath.vercel.app" target="_blank" rel="noopener">
-                Test it now <span aria-hidden="true">&nearr;</span>
-              </a>
-            </div>
-            <p class="project__note">Still in active development. Try it and tell me what breaks.</p>
-          </div>
-
-        </div>
-      </article>
-
-      <!-- ---- Project 02 ---- -->
-      <article class="project" id="project-2" data-reveal>
-        <div class="grid project__inner">
-          <div class="project__index"><span>02</span></div>
-          <div class="project__head">
-            <h3 class="project__title">Claude Trading Agent</h3>
-            <ul class="project__tags">
-              <li class="tag tag--accent">FinTech</li>
-              <li class="tag">Automation</li>
-              <li class="tag">Python</li>
-            </ul>
-          </div>
-
-          <div class="project__problem">
-            <p class="project__field-label">Problem</p>
-            <p>
-              Active swing trading demands constant screening, sentiment reading,
-              and disciplined execution, work that is easy to do inconsistently
-              by hand. This agent automates the full loop so that a systematic
-              strategy runs unattended.
-            </p>
-
-            <details class="project__media">
-              <summary>View screenshot</summary>
-              <figure>
-                <img src="assets/discord.jpg"
-                  alt="Claude Trading Agent posting a trade execution and P&amp;L update to Discord." loading="lazy" />
-                <figcaption>Discord webhook: weekly trade execution and P&amp;L update.</figcaption>
-              </figure>
-            </details>
-          </div>
-
-          <div class="project__detail">
-            <p class="project__field-label">What it does</p>
-            <p>
-              Scans 254 large-cap stocks weekly for trend (60-day relative strength
-              vs. SPY) and dip signals, layers in news and social sentiment, then
-              places risk-managed orders on Alpaca and posts P&amp;L to Discord.
-              The entire system runs on scheduled GitHub Actions. No server.
-            </p>
-
-            <p class="project__field-label">Stack</p>
-            <p class="project__stack">
-              Python &middot; alpaca-py &middot; pandas &middot; numpy &middot;
-              Groq (Llama&nbsp;3.3&nbsp;70B) &middot; Claude &middot; Alpaca News API
-              &middot; Stocktwits &amp; Reddit sentiment &middot; GitHub Actions &middot;
-              Discord webhooks
-            </p>
-
-            <p class="project__field-label">Process &amp; reflection</p>
-            <p class="project__draft">
-              I split the bot into a clear pipeline
-              (<code>research &rarr; analyze &rarr; execute &rarr; monitor</code>)
-              so each stage could be tested on its own. The hardest part was
-              that GitHub Actions runs are <em>stateless</em>: every run starts cold,
-              with no memory of open positions. I solved it by persisting trade
-              history and portfolio snapshots to <code>memory.json</code> and
-              enforcing risk rules (5% stops, at most three positions at 20% each)
-              on every wake-up, which made unattended execution reliable.
-            </p>
-
-            <details class="snippet">
-              <summary>View code: position sizing</summary>
-              <pre><code># risk.py: fixed-fractional position sizing with a hard cap
-MAX_POSITIONS = 3      # never hold more than three names at once
-ALLOCATION    = 0.20   # commit 20% of equity per position
-STOP_LOSS     = 0.05   # 5% protective stop on every entry
-
-def size_order(equity: float, price: float, open_positions: int) -> int:
-    """Return whole-share count for a new entry, or 0 if we're at capacity."""
-    if open_positions &gt;= MAX_POSITIONS:
-        return 0                      # respect the concurrency cap
-    dollars = equity * ALLOCATION     # dollars allotted to this trade
-    return int(dollars // price)      # brokers fill whole shares only
-</code></pre>
-              <p class="snippet__note">Representative logic. Full source on GitHub.</p>
-            </details>
-
-            <div class="project__links">
-              <a class="link-btn" href="https://github.com/atharvausturge/ClaudeTradingAgent" target="_blank"
-                rel="noopener">
-                GitHub repository <span aria-hidden="true">&nearr;</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </article>
-
-      <!-- ---- Project 03 ---- -->
-      <article class="project" id="project-3" data-reveal>
-        <div class="grid project__inner">
-          <div class="project__index"><span>03</span></div>
-          <div class="project__head">
-            <h3 class="project__title">Tavio</h3>
-            <ul class="project__tags">
-              <li class="tag tag--accent">Accessibility</li>
-              <li class="tag">REST API</li>
-              <li class="tag">FastAPI</li>
-            </ul>
-          </div>
-
-          <div class="project__problem">
-            <p class="project__field-label">Problem</p>
-            <p>
-              Finding a restaurant that fits your needs is hard when you can&rsquo;t
-              scan a menu by sight. Tavio is a backend that makes restaurant
-              discovery, menus, and recommendations work for blind and visually
-              impaired users.
-            </p>
-
-            <details class="project__media">
-              <summary>View screenshot</summary>
-              <figure>
-                <img src="assets/Tavio.jpg" alt="Tavio backend: restaurant recommendation API response."
-                  loading="lazy" />
-                <figcaption>Recommendation response: ranked restaurants scored against a user&rsquo;s preferences.
-                </figcaption>
-              </figure>
-            </details>
-          </div>
-
-          <div class="project__detail">
-            <p class="project__field-label">What it does</p>
-            <p>
-              Stores restaurant and menu data, discovers nearby options through
-              Google Places, enriches them with travel time from Google Routes, and
-              returns the top three matches scored against a user&rsquo;s cuisine,
-              dietary, allergen, spice, price, and travel-time preferences.
-            </p>
-
-            <p class="project__field-label">Stack</p>
-            <p class="project__stack">
-              FastAPI &middot; PostgreSQL &middot; SQLAlchemy &middot; Pydantic
-              &middot; Google Places API &middot; Google Routes API &middot; Python
-            </p>
-
-            <p class="project__field-label">Process &amp; reflection</p>
-            <p class="project__draft">
-              I designed the recommendation engine as a weighted blend of independent
-              match functions, each returning a 0&ndash;1 score, so I could tune one
-              dimension without breaking the others. The trickiest piece was
-              composing two Google APIs cleanly (Places for discovery, Routes
-              for travel-time enrichment) while keeping the data model strict
-              with Pydantic so bad input never reached the scorer. Tavio was
-              our team&rsquo;s entry in the NJ TSA Software Development
-              competition, where it placed 4th statewide.
-            </p>
-
-            <details class="snippet">
-              <summary>View code: weighted match score</summary>
-              <pre><code># recommend.py: blend per-dimension matches into one ranking score
-WEIGHTS = {"cuisine": 0.30, "dietary": 0.25, "allergens": 0.20,
-           "spice": 0.10, "price": 0.10, "travel": 0.05}
-
-def score(restaurant, prefs) -&gt; float:
-    """Each match_* fn returns 0..1; weights make the trade-offs explicit."""
-    parts = {
-        "cuisine":   cuisine_match(restaurant, prefs),
-        "dietary":   dietary_match(restaurant, prefs),
-        "allergens": allergen_safety(restaurant, prefs),
-        "spice":     spice_match(restaurant, prefs),
-        "price":     price_match(restaurant, prefs),
-        "travel":    travel_match(restaurant, prefs),
-    }
-    return sum(WEIGHTS[k] * v for k, v in parts.items())
-</code></pre>
-              <p class="snippet__note">Representative logic. Full source on GitHub.</p>
-            </details>
-
-            <div class="project__links">
-              <a class="link-btn" href="https://github.com/atharvausturge/Tavio-Backend" target="_blank" rel="noopener">
-                GitHub repository <span aria-hidden="true">&nearr;</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </article>
-
-      <!-- ---- Project 04 ---- -->
-      <article class="project" id="project-4" data-reveal>
-        <div class="grid project__inner">
-          <div class="project__index"><span>04</span></div>
-          <div class="project__head">
-            <h3 class="project__title">Isolytics</h3>
-            <ul class="project__tags">
-              <li class="tag tag--accent">Mobile</li>
-              <li class="tag">Team</li>
-              <li class="tag">TypeScript</li>
-            </ul>
-          </div>
-
-          <div class="project__problem">
-            <p class="project__field-label">Problem</p>
-            <p>
-              Fitness data is normally scattered across half a dozen apps: one
-              for lifts, another for meals, another for cardio, another for progress
-              photos. Isolytics pulls all of it into a single cross-platform mobile
-              app, with an AI assistant for fitness and nutrition questions.
-            </p>
-
-            <details class="project__media">
-              <summary>View screenshot</summary>
-              <figure>
-                <img src="assets/Isolytics.jpg" alt="Isolytics: cross-platform fitness tracking app screen."
-                  loading="lazy" />
-                <figcaption>Isolytics: one of the app screens running on iOS.</figcaption>
-              </figure>
-            </details>
-          </div>
-
-          <div class="project__detail">
-            <p class="project__field-label">What it does</p>
-            <p>
-              One Expo + React Native codebase that ships to iOS, Android, and the
-              web. Tracks body composition (body-fat % via the U.S. Navy
-              circumference method), lifts, meals with macros, GPS-tracked cardio
-              runs, and dated progress photos, all surfaced in a unified
-              history timeline. A Gemini-powered chat answers fitness questions
-              in-app. Auth and per-user data live in Supabase with Row-Level
-              Security; lifts, meals, and photos are cached locally so history
-              works offline.
-            </p>
-
-            <p class="project__field-label">Stack</p>
-            <p class="project__stack">
-              TypeScript &middot; React Native &middot; Expo &middot; Expo Router
-              &middot; Supabase (Auth + Postgres + RLS) &middot; Google Gemini API
-              &middot; expo-location &middot; expo-camera &middot; AsyncStorage
-            </p>
-
-            <p class="project__field-label">Process &amp; reflection</p>
-            <p class="project__draft">
-              Choosing Expo + React Native let the team ship one codebase to three
-              platforms; Expo Router&rsquo;s file-based routing kept the navigation
-              tree obvious as features were added. The two pieces that took the
-              most iteration were the live GPS cardio tracker built on
-              <code>expo-location</code> (streaming route points, distance,
-              and elevation in real time without draining the battery), and
-              the Supabase Row-Level Security policies, which had to be airtight so
-              users could never read another user&rsquo;s rows.
-            </p>
-
-            <div class="project__links">
-              <a class="link-btn" href="https://github.com/ayaang12/isolytics" target="_blank" rel="noopener">
-                GitHub repository <span aria-hidden="true">&nearr;</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </article>
-
-      <!-- ---- Project 05 ---- -->
-      <article class="project" id="project-5" data-reveal>
-        <div class="grid project__inner">
-          <div class="project__index"><span>05</span></div>
-          <div class="project__head">
-            <h3 class="project__title">Teddy Bear Clinic</h3>
-            <ul class="project__tags">
-              <li class="tag tag--accent">Nonprofit</li>
-              <li class="tag">Team</li>
-              <li class="tag">Flask</li>
-            </ul>
-          </div>
-
-          <div class="project__problem">
-            <p class="project__field-label">Problem</p>
-            <p>
-              Kids often associate doctors, EMTs, and fire trucks with stress and
-              fear, which makes real emergencies and routine medical visits
-              harder. The Teddy Bear Clinic is a Morris County 501(c)(3) that
-              flips that script: children bring stuffed animals to a free
-              community event for pretend check-ups with real healthcare workers
-              and first responders. The site is its public face.
-            </p>
-
-            <details class="project__media">
-              <summary>View screenshot</summary>
-              <figure>
-                <img src="assets/TBC.jpg" alt="Teddy Bear Clinic: live nonprofit website." loading="lazy" />
-                <figcaption>theteddybearclinic.org, the deployed nonprofit site.</figcaption>
-              </figure>
-            </details>
-          </div>
-
-          <div class="project__detail">
-            <p class="project__field-label">What it does</p>
-            <p>
-              The site is the org&rsquo;s signup hub and storytelling surface:
-              registration for the next clinic (2027), the org&rsquo;s mission and
-              team, volunteer and partnership recruitment, a gallery of past
-              events, and sponsor recognition (Nomadics, Morgan Stanley). It
-              supports the nonprofit&rsquo;s ongoing work: they&rsquo;ve
-              served 750+ children to date.
-            </p>
-
-            <p class="project__field-label">Stack</p>
-            <p class="project__stack">
-              Python &middot; Flask &middot; Jinja templates &middot; vanilla HTML,
-              CSS &amp; JavaScript
-            </p>
-
-            <p class="project__field-label">Process &amp; reflection</p>
-            <p class="project__draft">
-              The team chose Flask + server-rendered Jinja templates over a SPA
-              framework for the right reasons here: the site is mostly read-only
-              content with one registration flow, so a single Python process
-              keeps hosting simple, page loads fast, and there&rsquo;s no build
-              step to maintain, important for a volunteer-run org that
-              has to be able to hand the codebase off.
-            </p>
-
-            <div class="project__links">
-              <a class="link-btn link-btn--solid" href="https://theteddybearclinic.org" target="_blank" rel="noopener">
-                Visit live site <span aria-hidden="true">&nearr;</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </article>
-    </section>
-
-    <!-- ============================ RESUME ============================ -->
-    <section class="section resume" id="resume" aria-labelledby="resume-heading">
-      <div class="grid">
-        <p class="section__label">03 / Résumé</p>
-        <div class="resume__body">
-          <h2 class="resume__heading" id="resume-heading" data-reveal>
-            Atharva Usturge
-          </h2>
-          <p class="resume__tagline" data-reveal>
-            Fintech systems builder focused on signal, risk, and real-time reliability.
-          </p>
-          <div class="resume__signature" data-reveal>
-            <div class="resume__stamp" aria-hidden="true">AU</div>
-            <div class="resume__actions">
-              <a class="link-btn link-btn--solid" href="AtharvaUsturge-ResumeCopy.pdf" download>
-                Download PDF <span aria-hidden="true">&darr;</span>
-              </a>
-              <a class="link-btn" href="AtharvaUsturge-ResumeCopy.pdf" target="_blank" rel="noopener">
-                Open in new tab <span aria-hidden="true">&nearr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ CONTACT ============================ -->
-    <section class="section contact" id="contact" aria-labelledby="contact-heading">
-      <div class="grid">
-        <p class="section__label">04 / Contact</p>
-        <div class="contact__body">
-          <h2 class="contact__heading" id="contact-heading" data-reveal>
-            Let&rsquo;s talk.
-          </h2>
-          <ul class="contact__list" data-reveal>
-            <li>
-              <span class="contact__key">Email</span>
-              <a href="mailto:atharva.usturge@gmail.com">atharva.usturge@gmail.com <span
-                  aria-hidden="true">&nearr;</span></a>
-            </li>
-            <li>
-              <span class="contact__key">GitHub</span>
-              <a href="https://github.com/atharvausturge" target="_blank" rel="noopener">github.com/atharvausturge <span
-                  aria-hidden="true">&nearr;</span></a>
-            </li>
-            <li>
-              <span class="contact__key">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/atharva-usturge-a80535349/" target="_blank"
-                rel="noopener">in/atharva-usturge <span aria-hidden="true">&nearr;</span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-
-  <script src="main.js"></script>
-  <!-- Optional local-only config. Logs a harmless 404 in dev tools if you
-       haven't created the file yet. See ticker.config.example.js. -->
-  <script src="ticker.config.local.js"></script>
-  <script src="ticker.js"></script>
+    </div>
+    <p class="foot">Atharva Usturge, Mt. Olive, New Jersey.</p>
+  </div>
+</footer>
+<script src="main.js?v=4"></script>
 </body>
 
 </html>
