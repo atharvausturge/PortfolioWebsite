@@ -120,6 +120,12 @@ details pre { margin: 12px 0 0; background: var(--ink); color: var(--paper); pad
 .tile .phone img { border-radius: 18px; max-height: 190px; }
 .project__shot .phone img { max-height: 520px; }
 
+/* Portfolio only: every other project flips, so the text is on the left and the
+   picture on the right. On narrow screens the picture always stays on top. */
+@media (min-width: 961px) {
+  #work ~ .project:nth-of-type(even) .project__shot { order: 2; border-right: 0; border-left: 1px solid var(--ink); }
+}
+
 @media (max-width: 960px) {
   header nav a:not(.nav-btn):not(.keep) { display: none; }
   .hero, .contact .row { grid-template-columns: 1fr; }
